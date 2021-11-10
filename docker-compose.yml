@@ -44,6 +44,11 @@ services:
             - .:/usr/src/app
             - /usr/src/app/node_modules
         restart: unless-stopped
+        
+volumes:
+    postgresql_data:
+        driver: local
+
 
 networks:
     nesjs-network:
